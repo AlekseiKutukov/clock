@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200&display=swap');
+
+
+body{
+    font-family: 'Chivo Mono', monospace;
+    overflow: hidden;
+    background: conic-gradient(from .5turn at 0% 0%, #00c476, 10%, #82b0ff, 90%, #00c476);
+}
+
+@keyframes aniname {
+    0% {
+      opacity: 0;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  }
+
+#bar1{
+animation: aniname 1s linear infinite;}
+
+.container{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.digitalClock{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 2px;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+}
+
+.digitalClock h1{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 5rem;
+}
+
+@media(max-width: 768px){
+    #bar1, #bar2{
+        display: none;
+    }
+
+
+.digitalClock{
+    text-align: center;
+    width: 100%;
+}
+
+.digitalClock h1{
+    display: block;
+}
+
+}
+
+@media(max-width:480px){
+    .digitalClock h1{
+        font-size: 4rem;
+    }
+}
